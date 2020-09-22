@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>tatabogh.comss mamssad</title>
+    <title>tatabogh.com masha</title>
 
     <meta name="keywords" content="" />
     <meta name="description" content="">
