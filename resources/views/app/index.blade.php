@@ -313,207 +313,43 @@
         <section class="bg-light">
             <div class="container">
                 <div class="row align-items-center justify-content-center">
-                    <div class="col-sm-9 col-md-7 col-lg-4 mb-3 mb-md-4 mb-lg-0 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-                        <div class="card card-body align-items-center shadow">
 
-                            <div class="text-center mb-4">
-                                <h4>Basic</h4>
-                                <div class="d-flex align-items-center justify-content-center mb-1">
-                                    <span class="h5 mb-0 mr-2">$</span>
-                                    <span class="display-3 mb-0 text-dark">19</span>
-                                </div>
-                                <div>Per user, per month</div>
-                            </div>
-                            <ul class="list-unstyled p-0">
-                                <li class="my-3">
-                                    <div class="d-flex align-items-center">
-                                        <div class="rounded-circle bg-success-alt">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="injected-svg m-2 icon icon-xs bg-success" data-src="assets/img/icons/interface/icon-check.svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                                <path d="M20 6L9 17L4 12" stroke="#2C3038" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </div>
-                                        <h6 class="mb-0 ml-3">2GB Cloud Storage</h6>
-                                    </div>
-                                </li>
-                                <li class="my-3">
-                                    <div class="d-flex align-items-center">
-                                        <div class="rounded-circle bg-success-alt">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="injected-svg m-2 icon icon-xs bg-success" data-src="assets/img/icons/interface/icon-check.svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                                <path d="M20 6L9 17L4 12" stroke="#2C3038" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </div>
-                                        <h6 class="mb-0 ml-3">100GB CDN Bandwidth</h6>
-                                    </div>
-                                </li>
-                                <li class="my-3">
-                                    <div class="d-flex align-items-center">
-                                        <div class="rounded-circle bg-success-alt">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="injected-svg m-2 icon icon-xs bg-success" data-src="assets/img/icons/interface/icon-check.svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                                <path d="M20 6L9 17L4 12" stroke="#2C3038" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </div>
-                                        <h6 class="mb-0 ml-3">98.88% Uptime Guarantee</h6>
-                                    </div>
-                                </li>
-                                <li class="my-3 opacity-50">
-                                    <div class="d-flex align-items-center">
-                                        <div class="rounded-circle bg-danger-alt">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="injected-svg m-2 icon icon-xs bg-danger" data-src="assets/img/icons/interface/icon-x.svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                                <path d="M18 6L6 18" stroke="#2C3038" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                                <path d="M6 6L18 18" stroke="#2C3038" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </div>
-                                        <h6 class="mb-0 ml-3">Personal Account Manager</h6>
-                                    </div>
-                                </li>
-                                <li class="my-3 opacity-50">
-                                    <div class="d-flex align-items-center">
-                                        <div class="rounded-circle bg-danger-alt">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="injected-svg m-2 icon icon-xs bg-danger" data-src="assets/img/icons/interface/icon-x.svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                                <path d="M18 6L6 18" stroke="#2C3038" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                                <path d="M6 6L18 18" stroke="#2C3038" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </div>
-                                        <h6 class="mb-0 ml-3">Enterprise SLA</h6>
-                                    </div>
-                                </li>
-                            </ul>
-                            <a href="#" class="btn btn-lg btn-block btn-outline-primary">Start with Basic</a>
-                        </div>
-                    </div>
-                    <div class="col-sm-9 col-md-7 col-lg-4 mb-3 mb-md-4 mb-lg-0 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
-                        <div class="card card-body align-items-center shadow">
-                            <div class="badge badge-success badge-pill mb-4">Best Value</div>
-                            <div class="text-center mb-4">
-                                <h4>Premium</h4>
-                                <div class="d-flex align-items-center justify-content-center mb-1">
-                                    <span class="h5 mb-0 mr-2">$</span>
-                                    <span class="display-3 mb-0 text-dark">29</span>
-                                </div>
-                                <div>Per user, per month</div>
-                            </div>
-                            <ul class="list-unstyled p-0">
-                                <li class="my-3">
-                                    <div class="d-flex align-items-center">
-                                        <div class="rounded-circle bg-success-alt">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="injected-svg m-2 icon icon-xs bg-success" data-src="assets/img/icons/interface/icon-check.svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                                <path d="M20 6L9 17L4 12" stroke="#2C3038" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </div>
-                                        <h6 class="mb-0 ml-3">20GB Cloud Storage</h6>
-                                    </div>
-                                </li>
-                                <li class="my-3">
-                                    <div class="d-flex align-items-center">
-                                        <div class="rounded-circle bg-success-alt">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="injected-svg m-2 icon icon-xs bg-success" data-src="assets/img/icons/interface/icon-check.svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                                <path d="M20 6L9 17L4 12" stroke="#2C3038" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </div>
-                                        <h6 class="mb-0 ml-3">1TB CDN Bandwidth</h6>
-                                    </div>
-                                </li>
-                                <li class="my-3">
-                                    <div class="d-flex align-items-center">
-                                        <div class="rounded-circle bg-success-alt">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="injected-svg m-2 icon icon-xs bg-success" data-src="assets/img/icons/interface/icon-check.svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                                <path d="M20 6L9 17L4 12" stroke="#2C3038" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </div>
-                                        <h6 class="mb-0 ml-3">99.95% Uptime Guarantee</h6>
-                                    </div>
-                                </li>
-                                <li class="my-3">
-                                    <div class="d-flex align-items-center">
-                                        <div class="rounded-circle bg-success-alt">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="injected-svg m-2 icon icon-xs bg-success" data-src="assets/img/icons/interface/icon-check.svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                                <path d="M20 6L9 17L4 12" stroke="#2C3038" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </div>
-                                        <h6 class="mb-0 ml-3">Personal Account Manager</h6>
-                                    </div>
-                                </li>
-                                <li class="my-3 opacity-50">
-                                    <div class="d-flex align-items-center">
-                                        <div class="rounded-circle bg-danger-alt">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="injected-svg m-2 icon icon-xs bg-danger" data-src="assets/img/icons/interface/icon-x.svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                                <path d="M18 6L6 18" stroke="#2C3038" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                                <path d="M6 6L18 18" stroke="#2C3038" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </div>
-                                        <h6 class="mb-0 ml-3">Enterprise SLA</h6>
-                                    </div>
-                                </li>
-                            </ul>
-                            <a href="#" class="btn btn-lg btn-block btn-primary">Start with Premium</a>
-                        </div>
-                    </div>
-                    <div class="col-sm-9 col-md-7 col-lg-4 mb-3 mb-md-4 mb-lg-0 aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
-                        <div class="card card-body align-items-center shadow">
 
-                            <div class="text-center mb-4">
-                                <h4>Pro</h4>
-                                <div class="d-flex align-items-center justify-content-center mb-1">
-                                    <span class="h5 mb-0 mr-2">$</span>
-                                    <span class="display-3 mb-0 text-dark">79</span>
+                    @foreach (\App\Package::all() as $package)
+                        <div class="col-sm-9 col-md-7 col-lg-4 mb-3 mb-md-4 mb-lg-0 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+                            <div class="card card-body align-items-center shadow">
+
+                                <div class="text-center mb-4">
+                                    <h4>{{ $package->title }}</h4>
+                                    <div class="d-flex align-items-center justify-content-center mb-1">
+                                        <span class="h5 mb-0 mr-2">ریال</span>
+                                        <span style="font-size: 19px" class=" mb-0 text-dark">{{ number_format($package->price) }}</span>
+                                    </div>
+                                    <div>ماهانه</div>
                                 </div>
-                                <div>Per user, per month</div>
+                                <ul style="direction: rtl" class="list-unstyled p-0">
+                                    @foreach (explode('-', $package->items) as $item)
+                                        <li class="my-3">
+                                            <div class="d-flex align-items-center">
+                                                <div class="rounded-circle bg-success-alt">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="injected-svg m-2 icon icon-xs bg-success" data-src="assets/img/icons/interface/icon-check.svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        <path d="M20 6L9 17L4 12" stroke="#2C3038" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                </div>
+                                                <h6 class="mb-0 mr-3">{{ $item }}</h6>
+                                            </div>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                                <a href="#" class="btn btn-lg btn-block btn-outline-primary">انتخاب</a>
                             </div>
-                            <ul class="list-unstyled p-0">
-                                <li class="my-3">
-                                    <div class="d-flex align-items-center">
-                                        <div class="rounded-circle bg-success-alt">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="injected-svg m-2 icon icon-xs bg-success" data-src="assets/img/icons/interface/icon-check.svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                                <path d="M20 6L9 17L4 12" stroke="#2C3038" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </div>
-                                        <h6 class="mb-0 ml-3">Unlimited Storage</h6>
-                                    </div>
-                                </li>
-                                <li class="my-3">
-                                    <div class="d-flex align-items-center">
-                                        <div class="rounded-circle bg-success-alt">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="injected-svg m-2 icon icon-xs bg-success" data-src="assets/img/icons/interface/icon-check.svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                                <path d="M20 6L9 17L4 12" stroke="#2C3038" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </div>
-                                        <h6 class="mb-0 ml-3">100TB CDN Bandwidth</h6>
-                                    </div>
-                                </li>
-                                <li class="my-3">
-                                    <div class="d-flex align-items-center">
-                                        <div class="rounded-circle bg-success-alt">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="injected-svg m-2 icon icon-xs bg-success" data-src="assets/img/icons/interface/icon-check.svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                                <path d="M20 6L9 17L4 12" stroke="#2C3038" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </div>
-                                        <h6 class="mb-0 ml-3">99.999% Uptime Guarantee</h6>
-                                    </div>
-                                </li>
-                                <li class="my-3">
-                                    <div class="d-flex align-items-center">
-                                        <div class="rounded-circle bg-success-alt">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="injected-svg m-2 icon icon-xs bg-success" data-src="assets/img/icons/interface/icon-check.svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                                <path d="M20 6L9 17L4 12" stroke="#2C3038" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </div>
-                                        <h6 class="mb-0 ml-3">Personal Account Manager</h6>
-                                    </div>
-                                </li>
-                                <li class="my-3">
-                                    <div class="d-flex align-items-center">
-                                        <div class="rounded-circle bg-success-alt">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="injected-svg m-2 icon icon-xs bg-success" data-src="assets/img/icons/interface/icon-check.svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                                <path d="M20 6L9 17L4 12" stroke="#2C3038" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </div>
-                                        <h6 class="mb-0 ml-3">Enterprise SLA</h6>
-                                    </div>
-                                </li>
-                            </ul>
-                            <a href="#" class="btn btn-lg btn-block btn-outline-primary">Start with Pro</a>
                         </div>
-                    </div>
+                    @endforeach
+
+
+
+
+
                 </div>
             </div>
         </section>

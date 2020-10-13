@@ -142,7 +142,7 @@ Contact: cyber.injector@yahoo.com
                         <div class="kt-footer__wrapper">
                             <div class="kt-footer__logo">
                                 <a href="/">
-                                    <img style="width: 60px;padding: 10px;" alt="Logo" src="/img/logo.png">
+                                    {{--<img style="width: 60px;padding: 10px;" alt="Logo" src="/img/logo.png">--}}
                                 </a>
                                 <div class="kt-footer__copyright">
                                     2020&nbsp;&copy;&nbsp;
@@ -245,6 +245,11 @@ Contact: cyber.injector@yahoo.com
     });
 </script>
 
+<!---start GOFTINO code--->
+<script type="text/javascript">
+    !function(){var a=window,d=document;function g(){var g=d.createElement("script"),s="https://www.goftino.com/widget/Hqa6DI",l=localStorage.getItem("goftino");g.type="text/javascript",g.async=!0,g.referrerPolicy="no-referrer-when-downgrade",g.src=l?s+"?o="+l:s;d.getElementsByTagName("head")[0].appendChild(g);}"complete"===d.readyState?g():a.attachEvent?a.attachEvent("onload",g):a.addEventListener("load",g,!1);}();
+</script>
+<!---end GOFTINO code--->
 
 @yield('footerScripts')
 

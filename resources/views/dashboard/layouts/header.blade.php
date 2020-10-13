@@ -2,7 +2,7 @@
 <div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
     <div class="kt-header-mobile__logo">
         <a href="/">
-            <img style="width: 80px;padding: 10px;" alt="Logo" src="/img/logo.png"/>
+            {{--<img style="width: 80px;padding: 10px;" alt="Logo" src="/img/logo.png"/>--}}
         </a>
     </div>
     <div class="kt-header-mobile__toolbar">
@@ -24,10 +24,10 @@
                         <div class="kt-header__brand   kt-grid__item" id="kt_header_brand">
                             <div class="kt-header__brand-logo">
                                 <a href="/">
-                                    <img style="width: 80px;padding: 10px;" alt="Logo" src="/img/logo.png"
-                                         class="kt-header__brand-logo-default"/>
-                                    <img style="width: 50px;padding: 1px;" alt="Logo" src="/img/logo.png"
-                                         class="kt-header__brand-logo-sticky"/>
+                                    {{--<img style="width: 80px;padding: 10px;" alt="Logo" src="/img/logo.png"--}}
+                                         {{--class="kt-header__brand-logo-default"/>--}}
+                                    {{--<img style="width: 50px;padding: 1px;" alt="Logo" src="/img/logo.png"--}}
+                                         {{--class="kt-header__brand-logo-sticky"/>--}}
                                 </a>
                             </div>
                             <div style="color: #fff" class="kt-header__brand-nav iranyekan">
@@ -97,15 +97,11 @@
                             <div class="kt-header__topbar-item kt-header__topbar-item--user">
                                 <div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,10px" aria-expanded="false">
                                     <span class="kt-header__topbar-username iranyekan"> {{ \Auth::user()->fName . ' ' . \Auth::user()->lName }}</span>
-                                    <img class="" alt="Pic" src="{{ \Auth::user()->avatar }}">
                                 </div>
                                 <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-xl">
                                     <!--begin: Head -->
                                     <div class="kt-user-card kt-user-card--skin-dark kt-notification-item-padding-x"
                                          style="background-image: url(/assets/media/misc/bg-1.jpg)">
-                                        <div class="kt-user-card__avatar">
-                                            <img  alt="Pic" src="{{ \Auth::user()->avatar }}"/>
-                                        </div>
                                         <div class="kt-user-card__name iranyekan">
                                             {{ \Auth::user()->fName . ' ' . \Auth::user()->lName }}
                                         </div>
@@ -166,55 +162,27 @@
                                             <i class="kt-menu__ver-arrow la la-angle-right"></i></a>
                                     </li>
 
-                                    <li class="kt-menu__item {{ request()->is('*events*') ? 'kt-menu__item--open kt-menu__item--here kt-menu__item--submenu kt-menu__item--rel kt-menu__item--open kt-menu__item--here' : '' }} "
+                                    <li class="kt-menu__item {{ request()->is('*package*') ? 'kt-menu__item--open kt-menu__item--here kt-menu__item--submenu kt-menu__item--rel kt-menu__item--open kt-menu__item--here' : '' }} "
                                         data-ktmenu-submenu-toggle="click" aria-haspopup="true">
-                                        <a href="{{ route('inquiry.index') }}" class="kt-menu__link">
-                                            <span class="kt-menu__link-text"> کاربران</span>
+                                        <a href="{{ route('package.index') }}" class="kt-menu__link">
+                                            <span class="kt-menu__link-text"> مدیریت پکیج ها</span>
                                             <i class="kt-menu__ver-arrow la la-angle-right"></i></a>
                                     </li>
 
-                                    <li class="kt-menu__item {{ request()->is('*events*') ? 'kt-menu__item--open kt-menu__item--here kt-menu__item--submenu kt-menu__item--rel kt-menu__item--open kt-menu__item--here' : '' }} "
+                                    <li class="kt-menu__item {{ request()->is('*user*') ? 'kt-menu__item--open kt-menu__item--here kt-menu__item--submenu kt-menu__item--rel kt-menu__item--open kt-menu__item--here' : '' }} "
                                         data-ktmenu-submenu-toggle="click" aria-haspopup="true">
-                                        <a href="{{ route('inquiry.index') }}" class="kt-menu__link">
-                                            <span class="kt-menu__link-text"> وبلاگ</span>
+                                        <a href="{{ route('user.index') }}" class="kt-menu__link">
+                                            <span class="kt-menu__link-text"> مدیریت کاربران</span>
                                             <i class="kt-menu__ver-arrow la la-angle-right"></i></a>
                                     </li>
 
 
-                                    <li class="kt-menu__item {{ request()->is('*settings*') ? 'kt-menu__item--open kt-menu__item--here kt-menu__item--submenu kt-menu__item--rel kt-menu__item--open kt-menu__item--here' : '' }} "
-                                        data-ktmenu-submenu-toggle="click" aria-haspopup="true">
-                                        <a href="" class="kt-menu__link">
-                                            <span class="kt-menu__link-text"> قوانین</span>
-                                            <i class="kt-menu__ver-arrow la la-angle-right"></i></a>
-                                    </li>
 
 
                                 </ul>
                             </div>
                             <div class="kt-header-toolbar">
-                                <div class="kt-quick-search kt-quick-search--inline kt-quick-search--result-compact"
-                                     {{--id="kt_quick_search_inline">--}}
-                                     id="">
-                                    <form method="get" class="kt-quick-search__form">
-                                        <div class="input-group">
-                                            <div style="width: 50px!important;" class="input-group-prepend"><span class="input-group-text"><i
-                                                            class="flaticon2-search-1"></i></span></div>
-                                            <input  type="text" class="form-control kt-quick-search__input"
-                                                   placeholder="جستجو رویداد ...">
-                                            <div class="input-group-append"><span class="input-group-text"><i
-                                                            class="la la-close kt-quick-search__close"
-                                                            style="display: none;"></i></span></div>
-                                        </div>
-                                    </form>
-                                    <div id="kt_quick_search_toggle" data-toggle="dropdown"
-                                         data-offset="0px,10px"></div>
-                                    <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-lg">
-                                        <div class="kt-quick-search__wrapper kt-scroll" data-scroll="true"
-                                             data-height="300" data-mobile-height="200">
 
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                         <!-- end: Header Menu -->

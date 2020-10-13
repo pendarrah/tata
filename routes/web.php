@@ -23,6 +23,10 @@ Route::namespace('Dashboard')->prefix('dashboard')->middleware('auth')->group(fu
 
     Route::get('/index', 'IndexController@index')->name('dashboard.index');
     Route::resource('inquiry', 'InquiryController');
+    Route::resource('package', 'PackageController');
+    Route::any('package/delete', 'PackageController@destroy');
+    Route::resource('user', 'UserController');
+
 
 });
 
