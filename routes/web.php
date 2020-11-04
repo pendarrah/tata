@@ -15,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'AppController@index');
 
+
+Route::get('/blog/{id}', 'BlogController@show')->name('app.blog');
+
 Auth::routes();
 
 
@@ -26,6 +29,11 @@ Route::namespace('Dashboard')->prefix('dashboard')->middleware('auth')->group(fu
     Route::resource('package', 'PackageController');
     Route::any('package/delete', 'PackageController@destroy');
     Route::resource('user', 'UserController');
+    Route::resource('tickets', 'TicketController');
+    Route::get('tickets/delete/{id}', 'TicketController@destroy')->name('ticket.delete');
+
+    Route::resource('blog', 'BlogController');
+    Route::any('blog/delete', 'BlogController@destroy');
 
 
 });

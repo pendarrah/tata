@@ -155,9 +155,9 @@
                                             <i class="kt-menu__ver-arrow la la-angle-right"></i></a>
                                     </li>
 
-                                    <li class="kt-menu__item {{ request()->is('*events*') ? 'kt-menu__item--open kt-menu__item--here kt-menu__item--submenu kt-menu__item--rel kt-menu__item--open kt-menu__item--here' : '' }} "
+                                    <li class="kt-menu__item {{ request()->is('*tickets*') ? 'kt-menu__item--open kt-menu__item--here kt-menu__item--submenu kt-menu__item--rel kt-menu__item--open kt-menu__item--here' : '' }} "
                                         data-ktmenu-submenu-toggle="click" aria-haspopup="true">
-                                        <a href="{{ route('inquiry.index') }}" class="kt-menu__link">
+                                        <a href="{{ route('tickets.index') }}" class="kt-menu__link">
                                             <span class="kt-menu__link-text"> درخواست ها</span>
                                             <i class="kt-menu__ver-arrow la la-angle-right"></i></a>
                                     </li>
@@ -173,6 +173,13 @@
                                         data-ktmenu-submenu-toggle="click" aria-haspopup="true">
                                         <a href="{{ route('user.index') }}" class="kt-menu__link">
                                             <span class="kt-menu__link-text"> مدیریت کاربران</span>
+                                            <i class="kt-menu__ver-arrow la la-angle-right"></i></a>
+                                    </li>
+
+                                    <li class="kt-menu__item {{ request()->is('*blog*') ? 'kt-menu__item--open kt-menu__item--here kt-menu__item--submenu kt-menu__item--rel kt-menu__item--open kt-menu__item--here' : '' }} "
+                                        data-ktmenu-submenu-toggle="click" aria-haspopup="true">
+                                        <a href="{{ route('blog.index') }}" class="kt-menu__link">
+                                            <span class="kt-menu__link-text"> مدیریت مطالب</span>
                                             <i class="kt-menu__ver-arrow la la-angle-right"></i></a>
                                     </li>
 

@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>tatabogh.com ali masha test</title>
+    <title>تطابق</title>
 
     <meta name="keywords" content="" />
     <meta name="description" content="">
@@ -79,11 +79,8 @@
                         </nav>
                         <div class="header-search d-none d-md-block">
                             <form id="searchForm" class="" action="page-search-results.html" method="get">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" name="q" id="q" placeholder="جستجو ..." required>
-                                    <span class="input-group-btn">
-													<button class="btn btn-light" type="submit"><i class="fa fa-search"></i></button>
-												</span>
+                                <div style="margin-top: 30px" class="input-group">
+                                    <input style="display: none" type="text" class="form-control" name="q" id="q" placeholder="جستجو ..." required>
                                 </div>
                             </form>
                         </div>
@@ -106,133 +103,13 @@
                                 <div class="header-nav-main header-nav-main-effect-1 header-nav-main-sub-effect-1">
                                     <nav class="collapse">
                                         <ul class="nav nav-pills" id="mainNav">
-                                            <li class="">
-                                                <a class="nav-link" href="#">
-                                                    صفحه اصلی
-                                                </a>
-                                            </li>
-                                            <li class="dropdown">
-                                                <a class="dropdown-item dropdown-toggle" href="#">
-                                                    خدمات
-                                                </a>
-                                                <ul class="dropdown-menu">
-                                                    <li>
-                                                        <a class="dropdown-item" href="#">
-                                                            زیر منو
-                                                        </a>
-                                                    </li>
-                                                    <li class="dropdown-submenu">
-                                                        <a class="dropdown-item" href="#">زیر منو</a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a class="dropdown-item" href="#">زیر منو</a></li>
-                                                            <li><a class="dropdown-item" href="#">زیر منو</a></li>
-                                                            <li><a class="dropdown-item" href="#">زیر منو</a></li>
-                                                            <li><a class="dropdown-item" href="#">زیر منو</a></li>
-                                                            <li><a class="dropdown-item" href="#">زیر منو</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="dropdown-submenu">
-                                                        <a class="dropdown-item" href="#">زیر منو</a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a class="dropdown-item" href="#">زیر منو</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown">
-                                                <a class="dropdown-item dropdown-toggle" href="#">
-                                                    محصولات
-                                                </a>
-                                                <ul class="dropdown-menu">
-                                                    <li>
-                                                        <a class="dropdown-item" href="#">
-                                                            زیر منو
-                                                        </a>
-                                                    </li>
-                                                    <li class="dropdown-submenu">
-                                                        <a class="dropdown-item" href="#">زیر منو</a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a class="dropdown-item" href="#">زیر منو</a></li>
-                                                            <li><a class="dropdown-item" href="#">زیر منو</a></li>
-                                                            <li><a class="dropdown-item" href="#">زیر منو</a></li>
-                                                            <li><a class="dropdown-item" href="#">زیر منو</a></li>
-                                                            <li><a class="dropdown-item" href="#">زیر منو</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="dropdown-submenu">
-                                                        <a class="dropdown-item" href="#">زیر منو</a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a class="dropdown-item" href="#">زیر منو</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown">
-                                                <a class="dropdown-item dropdown-toggle" href="#">
-                                                    اخبار
-                                                </a>
-                                                <ul class="dropdown-menu">
-                                                    <li>
-                                                        <a class="dropdown-item" href="#">
-                                                            زیر منو
-                                                        </a>
-                                                    </li>
-                                                    <li class="dropdown-submenu">
-                                                        <a class="dropdown-item" href="#">زیر منو</a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a class="dropdown-item" href="#">زیر منو</a></li>
-                                                            <li><a class="dropdown-item" href="#">زیر منو</a></li>
-                                                            <li><a class="dropdown-item" href="#">زیر منو</a></li>
-                                                            <li><a class="dropdown-item" href="#">زیر منو</a></li>
-                                                            <li><a class="dropdown-item" href="#">زیر منو</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="dropdown-submenu">
-                                                        <a class="dropdown-item" href="#">زیر منو</a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a class="dropdown-item" href="#">زیر منو</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown">
-                                                <a class="dropdown-item dropdown-toggle" href="#">
-                                                    وبلاگ
-                                                </a>
-                                                <ul class="dropdown-menu">
-                                                    <li>
-                                                        <a class="dropdown-item" href="#">
-                                                            زیر منو
-                                                        </a>
-                                                    </li>
-                                                    <li class="dropdown-submenu">
-                                                        <a class="dropdown-item" href="#">زیر منو</a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a class="dropdown-item" href="#">زیر منو</a></li>
-                                                            <li><a class="dropdown-item" href="#">زیر منو</a></li>
-                                                            <li><a class="dropdown-item" href="#">زیر منو</a></li>
-                                                            <li><a class="dropdown-item" href="#">زیر منو</a></li>
-                                                            <li><a class="dropdown-item" href="#">زیر منو</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="dropdown-submenu">
-                                                        <a class="dropdown-item" href="#">زیر منو</a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a class="dropdown-item" href="#">زیر منو</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="">
-                                                <a class="nav-link" href="#">
-                                                    درباره ما
-                                                </a>
-                                            </li>
-                                            <li class="">
-                                                <a class="nav-link active" href="#">
-                                                    باشگاه مشاورین
-                                                </a>
-                                            </li>
+                                            <li class=""><a class="nav-link" href="/">صفحه اصلی</a></li>
+                                            <li class="dropdown"><a class="dropdown-item" href="#services">خدمات</a></li>
+                                            <li class="dropdown"><a class="dropdown-item" href="#packages">پکیج ها</a></li>
+                                            <li class="dropdown"><a class="dropdown-item " href="#">اخبار</a></li>
+                                            <li class="dropdown"><a class="dropdown-item" href="#">وبلاگ</a></li>
+                                            <li class="dropdown"><a class="dropdown-item" href="{{ route('app.blog', 1) }}">درباره ما</a></li>
+                                            <li class=""><a class="nav-link active" href="#">باشگاه مشاورین</a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -502,13 +379,8 @@
                 <div class="col-lg-3">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d393.3739168092725!2d51.35044648189652!3d35.72117333558432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDQzJzE2LjMiTiA1McKwMjEnMDIuMyJF!5e0!3m2!1sen!2s!4v1600509885616!5m2!1sen!2s" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
-                <div class="col-lg-3">
-                    <h4>آخرین بلاگ ها</h4>
-                    <div id="tweet" class="twitter" data-plugin-tweets data-plugin-options="{'username': '', 'count': 2}">
-                        <p>Please wait...</p>
-                    </div>
-                </div>
-                <div class="col-lg-4">
+
+                <div class="col-lg-6">
                     <div class="contact-details">
                         <h4>تماس با ما</h4>
                         <ul class="contact">
@@ -519,7 +391,7 @@
                     </div>
                 </div>
                 <div class="col-lg-2">
-                    <h4>Follow Us</h4>
+                    <h4> مارا دنبال کنید</h4>
                     <ul class="social-icons">
                         <li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
                         <li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
@@ -533,7 +405,7 @@
                 <div class="row">
                     <div class="col-lg-1">
                         <a href="index.html" class="logo">
-                            <img alt="Porto Website Template" class="img-fluid" src="/app/img/logo-footer.png">
+                            <img alt="Porto Website Template" class="img-fluid" src="/app/img/logo.png">
                         </a>
                     </div>
                     <div class="col-lg-7">
@@ -544,9 +416,7 @@
                         <nav id="sub-menu">
                             <ul>
                                 <li><a href="#">تماس با ما</a></li>
-                                <li><a href="#">درباره ما</a></li>
-                                <li><a href="#">خدمات</a></li>
-                                <li><a href="#">سوالات متداول</a></li>
+                                <li><a href="{{ route('app.blog', 1) }}">درباره ما</a></li>
                             </ul>
                         </nav>
                     </div>

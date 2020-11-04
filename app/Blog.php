@@ -4,7 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Inquiry extends Model
+class Blog extends Model
 {
-    //
+    protected $guarded = ['id'];
+
 }

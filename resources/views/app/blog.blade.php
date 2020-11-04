@@ -15,7 +15,7 @@
                 </div>
                 <div class="row">
                     <div class="col">
-                        <h1>عنوان</h1>
+                        <h1>درباره تطابق</h1>
                     </div>
                 </div>
             </div>
@@ -34,7 +34,7 @@
 
 
                             <div class="post-content">
-                                {{ \App\Blog::where('id', 1)->first()->body }}
+                                {!! $blog->body !!}
                             </div>
                         </article>
 
