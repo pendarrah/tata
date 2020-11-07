@@ -135,9 +135,9 @@ svg.bg-danger [stroke]:not([stroke="none"]) {
 	stroke-width: 3px;
 }
 .btn-outline-primary:hover {
-	background-color: rgba(0,155,114,.2);
+	background-color: #666699a1;
 	border-color: transparent;
-	color: #009b72;
+	color: #fff;
 }
 .btn-group-lg > .btn, .btn-lg {
 	padding: 1.1875rem 2.25rem !important;
@@ -150,11 +150,11 @@ svg.bg-danger [stroke]:not([stroke="none"]) {
 	width: 100%;
 }
 .btn-outline-primary {
-	border-color: rgba(0,155,114,.25) !important;
+	border-color: #666699 !important;
 }
 .btn-outline-primary {
-	color: #009b72;
-	border-color: #009b72;
+	color: #666699;
+	border-color: #666699;
 }
 .badge {
 	vertical-align: middle;
@@ -246,4 +246,27 @@ html .heading-dark, html .lnk-dark, html .text-color-dark, html .text-dark {
 }
 .tatabogh-margin-bottom{
 	margin-bottom: 0px !important;
+}
+.section-custom-medical{
+	direction: rtl;
+	text-align: right;
+}
+.section-custom-medical p{
+	text-align: justify;
+}
+#packages-box > div:nth-child(2){
+	height: 500px;
+}
+#packages-box > div:nth-child(2) .btn{
+	background: #666699;
+	color: #bababa;
+}
+.tatabogh-bg{
+	background: #666699 !important;
+}
+#header .header-nav-main nav > ul > li.open > a, #header .header-nav-main nav > ul > li:hover > a{
+	background: #666699;
+}
+#header .header-nav-main nav > ul > li.dropdown.open > a::before, #header .header-nav-main nav > ul > li.dropdown:hover > a::before {
+	border-bottom-color: #bababa;
 }

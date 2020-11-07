@@ -90,11 +90,7 @@
                 <div class="header-row">
                     <div class="header-column">
                         <div class="header-row">
-                            <div class="header-logo">
-                                <a href="index.html">
-                                    <img alt="Porto" width="111" height="54" data-sticky-width="82" data-sticky-height="40" data-sticky-top="10" src="/app/img/logo.png">
-                                </a>
-                            </div>
+                            <a href="#" class="btn btn-primary tatabogh-bg"> باشگاه مشاورین </a>
                         </div>
                     </div>
                     <div class="header-column justify-content-end">
@@ -109,13 +105,18 @@
                                             <li class="dropdown"><a class="dropdown-item " href="#">اخبار</a></li>
                                             <li class="dropdown"><a class="dropdown-item" href="#">وبلاگ</a></li>
                                             <li class="dropdown"><a class="dropdown-item" href="{{ route('app.blog', 1) }}">درباره ما</a></li>
-                                            <li class=""><a class="nav-link active" href="#">باشگاه مشاورین</a></li>
                                         </ul>
                                     </nav>
                                 </div>
                                 <button class="btn header-btn-collapse-nav" data-toggle="collapse" data-target=".header-nav-main nav">
                                     <i class="fa fa-bars"></i>
                                 </button>
+                                
+                            <div class="header-logo">
+                                <a href="index.html">
+                                    <img alt="تطابق" width="111" height="54" data-sticky-width="82" data-sticky-height="40" data-sticky-top="10" src="/app/img/logo.png">
+                                </a>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -405,7 +406,7 @@
                 <div class="row">
                     <div class="col-lg-1">
                         <a href="index.html" class="logo">
-                            <img alt="Porto Website Template" class="img-fluid" src="/app/img/logo.png">
+                            <img alt="وبسایت تطابق" class="img-fluid" src="/app/img/logo.png">
                         </a>
                     </div>
                     <div class="col-lg-7">

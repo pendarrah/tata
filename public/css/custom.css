@@ -101,3 +101,7 @@
   position: relative;
   z-index: 100;
 }
+.section-custom-medical{
+  direction: rtl;
+  text-align: right;
+}
