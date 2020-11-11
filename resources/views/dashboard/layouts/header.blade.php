@@ -183,6 +183,20 @@
                                             <i class="kt-menu__ver-arrow la la-angle-right"></i></a>
                                     </li>
 
+                                    <li class="kt-menu__item {{ request()->is('*calls*') ? 'kt-menu__item--open kt-menu__item--here kt-menu__item--submenu kt-menu__item--rel kt-menu__item--open kt-menu__item--here' : '' }} "
+                                        data-ktmenu-submenu-toggle="click" aria-haspopup="true">
+                                        <a href="{{ route('dashboard.calls') }}" class="kt-menu__link">
+                                            <span class="kt-menu__link-text"> درخواست های تماس</span>
+                                            <i class="kt-menu__ver-arrow la la-angle-right"></i></a>
+                                    </li>
+
+                                    <li class="kt-menu__item {{ request()->is('*participate*') ? 'kt-menu__item--open kt-menu__item--here kt-menu__item--submenu kt-menu__item--rel kt-menu__item--open kt-menu__item--here' : '' }} "
+                                        data-ktmenu-submenu-toggle="click" aria-haspopup="true">
+                                        <a href="{{ route('dashboard.participate') }}" class="kt-menu__link">
+                                            <span class="kt-menu__link-text"> فرم های مشارکت</span>
+                                            <i class="kt-menu__ver-arrow la la-angle-right"></i></a>
+                                    </li>
+
 
 
 

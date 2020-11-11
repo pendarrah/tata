@@ -51,14 +51,16 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'fName' => ['required', 'string', 'max:255'],
-            'lName' => ['required', 'string', 'max:255'],
-            'nationalCode' => ['required'],
-            'companyName' => ['nullable', 'string', 'max:255'],
-            'mobile' => ['required', 'string', 'min:11', 'max:11'],
-            'sector' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'fNameRegister' => ['required', 'string', 'max:255'],
+            'lNameRegister' => ['required', 'string', 'max:255'],
+            'nationalCodeRegister' => ['required', 'numeric', 'digits:10'],
+            'companyNameRegister' => ['required', 'string', 'max:255'],
+            'mobileRegister' => ['required', 'numeric', 'digits:11'],
+            'sectorRegister' => ['required', 'string', 'max:255'],
+            'emailRegister' => ['required', 'string', 'email', 'max:255', 'unique:users,email'],
+            'passwordRegister' => ['required', 'string', 'min:8'],
+            'confirm_password' => ['required|same:password|min:6']
+
         ]);
     }
 
@@ -71,14 +73,14 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'fName' => $data['fName'],
-            'lName' => $data['lName'],
-            'nationalCode' => $data['nationalCode'],
-            'companyName' => $data['companyName'],
-            'mobile' => $data['mobile'],
-            'sector' => $data['sector'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+            'fName' => $data['fNameRegister'],
+            'lName' => $data['lNameRegister'],
+            'nationalCode' => $data['nationalCodeRegister'],
+            'companyName' => $data['companyNameRegister'],
+            'mobile' => $data['mobileRegister'],
+            'sector' => $data['sectorRegister'],
+            'email' => $data['emailRegister'],
+            'password' => Hash::make($data['passwordRegister']),
         ]);
     }
 }

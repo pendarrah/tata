@@ -13,7 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'AppController@index');
+Route::get('/', 'AppController@index')->name('app.index');
+Route::post('/participate', 'AppController@participate')->name('app.participate');
+Route::post('/call', 'AppController@call')->name('app.call');
 
 
 Route::get('/blog/{id}', 'BlogController@show')->name('app.blog');
@@ -35,6 +37,9 @@ Route::namespace('Dashboard')->prefix('dashboard')->middleware('auth')->group(fu
     Route::resource('blog', 'BlogController');
     Route::any('blog/delete', 'BlogController@destroy');
 
+    Route::get('/participate', 'ParticipatesController@index')->name('dashboard.participate');
+    Route::get('/calls', 'CallsController@index')->name('dashboard.calls');
 
 });
 
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');

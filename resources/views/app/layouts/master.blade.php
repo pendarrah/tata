@@ -45,6 +45,7 @@
     <link rel="stylesheet" href="/app/vendor/circle-flip-slideshow/css/component.css">
 
     <!-- Demo CSS -->
+    <link href="/assets/plugins/global/sweetalert/sweetalert.css" rel="stylesheet" type="text/css"/>
 
 
     <!-- Skin CSS -->
@@ -72,9 +73,23 @@
                                 <li class="nav-item d-sm-block">
                                     <a class="nav-link" data-toggle="modal" data-target="#mosharekatModal" href="#"><i class="fa fa-wpforms "></i> فرم مشارکت</a>
                                 </li>
-                                <li class="nav-item d-sm-block">
-                                    <a class="nav-link" data-toggle="modal" data-target="#loginModal" href="#"><i class="fa fa-sign-in"></i> ورود / عضویت</a>
-                                </li>
+
+                                @guest
+                                    <li class="nav-item d-sm-block">
+                                        <a class="nav-link" data-toggle="modal" data-target="#loginModal" href="#"><i class="fa fa-sign-in"></i> ورود </a>
+                                    </li>
+                                    <li class="nav-item d-sm-block">
+                                        <a class="nav-link" data-toggle="modal" data-target="#registerModal" href="#"><i class="fa fa-sign-in"></i> عضویت </a>
+                                    </li>
+                                 @endguest
+
+                                @auth
+                                    <li class="nav-item d-sm-block">
+                                        <a class="nav-link"  href="/dashboard/index">  سلام {{ Auth::user()->fName }} ، ورود به پنل کاربری </a>
+                                    </li>
+                                @endauth
+
+
                             </ul>
                         </nav>
                         <div class="header-search d-none d-md-block">
@@ -169,119 +184,137 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <div class="col-sm-offset-2 col-sm-12">
-                                    <button type="submit" class="btn btn-success">ورود</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer teamofitTextAlignRight">
-                        <a id="registerBtn" class="btn btn-default col-md-12">ثبت نام </a>
-                    </div>
-                </div>
-                <div class="registerModalTatabogh">
-                    <div class="modal-body">
-                         <form method="POST" class="form-horizontal" action="{{ route('register') }}">
-                                @csrf
 
-                                <div class="form-group row">
-                                <div class="col-md-6 col-sm-12">
-                                    <input type="text" class="form-control @error('fName') is-invalid @enderror" id="email" placeholder="نام *" name="fName">
-                                        @error('email')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                        @enderror
-                                </div>
-                                <div class="col-md-6 col-sm-12">
-                                    <input type="text" class="form-control @error('lName') is-invalid @enderror" id="email" placeholder="نام خانوادگی *" name="lName">
-                                        @error('lName')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                        @enderror
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-md-6 col-sm-12">
-                                    <input type="text" class="form-control @error('companyName') is-invalid @enderror" id="pwd" placeholder="نام شرکت" name="companyName">
-                                        @error('companyName')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                        @enderror
-                                </div>
-                                <div class="col-md-6 col-sm-12">
-                                    <input type="text" class="form-control @error('nationalCode') is-invalid @enderror" id="pwd" placeholder="کدملی *" name="nationalCode">
-                                        @error('nationalCode')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                        @enderror
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-md-6 col-sm-12">
-                                    <input type="text" class="form-control @error('mobile') is-invalid @enderror" id="pwd" placeholder="شماره تلفن همراه *" name="mobile">
-                                        @error('mobile')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                        @enderror
-                                </div>
-                                <div class="col-md-6 col-sm-12">
-                                    <input type="text" class="form-control @error('email') is-invalid @enderror" id="pwd" placeholder="آدرس ایمیل *" name="email">
-                                        @error('email')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                        @enderror
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-md-12 col-sm-12">
-                                    <textarea class="form-control @error('sector') is-invalid @enderror" name="sector" rows="3" id="textareaDefault" placeholder="زمینه فعالیت شرکت... *" disabled></textarea>
-                                        @error('sector')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                        @enderror
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-md-6 col-sm-12">
-                                    <input type="password" class="form-control @error('password') is-invalid @enderror" id="pwd" placeholder="کلمه عبور *" name="password">
-                                        @error('password')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                        @enderror
-                                </div>
-                                <div class="col-md-6 col-sm-12">
-                                    <input type="password" class="form-control @error('password_confirmation') is-invalid @enderror" id="pwd" placeholder="تکرار کلمه عبور" name="password_confirmation">
-                                        @error('password_confirmation')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                        @enderror
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-sm-offset-2 col-sm-12">
-                                    <button type="submit" class="btn btn-success col-md-12">ثبت نام</button>
-                                </div>
-                            </div>
-                        </form>
                     </div>
-                    <div class="modal-footer teamofitTextAlignRight">
-                        <a id="loginBtn" class="btn btn-default col-md-12">ورود به ناحیه کاربری</a>
+                    <div class="form-group row">
+                        <div class="col-sm-offset-2 col-sm-12">
+                            <button type="submit" id="signupp" class="btn btn-success col-md-12">ورود</button>
+                        </div>
                     </div>
+                    </form>
                 </div>
+
+
             </div>
 
         </div>
     </div>
+
+
+    <div class="modal fade" id="registerModal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="loginModalTitle">عضویت در تطابق</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="loginModalTatabogh">
+                    <div class="modal-body">
+                        <form method="POST" class="form-horizontal" action="{{ route('register') }}">
+                            @csrf
+
+                            <div class="form-group row">
+                                <div class="col-md-6 col-sm-12">
+                                    <input type="text" value="{{ old('fNameRegister') }}" class="form-control @error('fNameRegister') is-invalid @enderror" id="email" placeholder="نام *" name="fNameRegister">
+                                    @error('fNameRegister')
+                                    <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <input type="text" value="{{ old('lNameRegister') }}" class="form-control @error('lNameRegister') is-invalid @enderror" id="email" placeholder="نام خانوادگی *" name="lNameRegister">
+                                    @error('lNameRegister')
+                                    <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-6 col-sm-12">
+                                    <input type="text" value="{{ old('companyNameRegister') }}" class="form-control @error('companyNameRegister') is-invalid @enderror" id="pwd" placeholder="نام شرکت" name="companyNameRegister">
+                                    @error('companyNameRegister')
+                                    <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <input type="text" value="{{ old('nationalCodeRegister') }}" class="form-control @error('nationalCodeRegister') is-invalid @enderror" id="pwd" placeholder="کدملی *" name="nationalCodeRegister">
+                                    @error('nationalCodeRegister')
+                                    <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-6 col-sm-12">
+                                    <input type="text" value="{{ old('mobileRegister') }}" class="form-control @error('mobileRegister') is-invalid @enderror" id="pwd" placeholder="شماره تلفن همراه *" name="mobileRegister">
+                                    @error('mobileRegister')
+                                    <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <input type="text" value="{{ old('emailRegister') }}" class="form-control @error('emailRegister') is-invalid @enderror" id="pwd" placeholder="آدرس ایمیل *" name="emailRegister">
+                                    @error('emailRegister')
+                                    <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-12 col-sm-12">
+                                    <textarea value="{{ old('sectorRegister') }}" class="form-control @error('sectorRegister') is-invalid @enderror" name="sectorRegister" rows="3" id="textareaDefault" placeholder="زمینه فعالیت شرکت... *"></textarea>
+                                    @error('sectorRegister')
+                                    <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-6 col-sm-12">
+                                    <input value="{{ old('passwordRegister') }}" type="password" class="form-control @error('passwordRegister') is-invalid @enderror" id="pwd" placeholder="کلمه عبور *" name="passwordRegister">
+                                    @error('passwordRegister')
+                                    <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <input type="password" class="form-control @error('password_confirmation') is-invalid @enderror" id="pwd" placeholder="تکرار کلمه عبور" name="password_confirmation">
+                                    @error('password_confirmation')
+                                    <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-offset-2 col-sm-12">
+                                    <button type="submit" id="signupp" class="btn btn-success col-md-12">ثبت نام</button>
+                                </div>
+                            </div>
+                        </form>
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+        </div>
+    </div>
+
+
+
     <div class="modal fade" id="mosharekatModal" role="dialog">
         <div class="modal-dialog">
             <!-- Modal content-->
@@ -293,34 +326,60 @@
                 <div class="mosharekatModalTatabogh">
                     <div class="modal-body">
 
-                        <form class="form-horizontal" action="#">
+                        <form class="form-horizontal" method="POST" action="{{ route('app.participate') }}">
+                            @csrf
                             <div class="form-group row">
                                 <div class="col-md-12 col-sm-12">
-                                    <select class="form-control">
-                                        <option value=""> خدمات مورد نظر برای مشارکت ... </option>
-                                        <option value="">حسابرسي تامين اجتماعي</option>
-                                        <option value="">خدمات مالي و مالياتي</option>
-                                        <option value="">خدمات حقوقي</option>
-                                        <option value="">ارزيابي ريسك</option>
-                                        <option value="">خدمات بيمه</option>
-                                        <option value="">خدمات اداري</option>
+                                    <select name="service" class="form-control @error('service') is-invalid @enderror ">
+                                        <option selected disabled> خدمات مورد نظر برای مشارکت ... </option>
+                                        <option value="حسابرسي تامين اجتماعي">حسابرسي تامين اجتماعي</option>
+                                        <option value="خدمات مالي و مالياتي">خدمات مالي و مالياتي</option>
+                                        <option value="خدمات حقوقي">خدمات حقوقي</option>
+                                        <option value="ارزيابي ريسك">ارزيابي ريسك</option>
+                                        <option value="خدمات بيمه">خدمات بيمه</option>
+                                        <option value="خدمات اداري">خدمات اداري</option>
                                     </select>
+                                    @error('service')
+                                    <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-md-6 col-sm-12">
-                                    <input type="text" class="form-control" id="email" placeholder="نام *" name="email">
+                                    <input type="text" class="form-control @error('fNameM') is-invalid @enderror" id="email" placeholder="نام *" name="fNameM">
+                                    @error('fNameM')
+                                    <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                                 <div class="col-md-6 col-sm-12">
-                                    <input type="text" class="form-control" id="email" placeholder="نام خانوادگی *" name="email">
+                                    <input type="text" class="form-control @error('lNameM') is-invalid @enderror" id="email" placeholder="نام خانوادگی *" name="lNameM">
+                                    @error('lNameM')
+                                    <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-md-6 col-sm-12">
-                                    <input type="text" class="form-control" id="pwd" placeholder="نام شرکت" name="officeName">
+                                    <input type="text" class="form-control @error('companyM') is-invalid @enderror" id="pwd" placeholder="نام شرکت" name="companyM">
+                                    @error('companyM')
+                                    <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                                 <div class="col-md-6 col-sm-12">
-                                    <input type="text" class="form-control" id="pwd" placeholder="شماره تلفن*" name="pwd">
+                                    <input type="text" class="form-control @error('phoneM') is-invalid @enderror" id="pwd" placeholder="شماره تلفن*" name="phoneM">
+                                    @error('phoneM')
+                                    <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -346,15 +405,26 @@
                 <div class="mosharekatModalTatabogh">
                     <div class="modal-body">
 
-                        <form class="form-horizontal" action="#">
+                        <form class="form-horizontal" method="POST" action="{{ route('app.call') }}">
+                            @csrf
                             <div class="form-group row">
                                 <div class="col-md-12 col-sm-12">
-                                    <input type="text" class="form-control" id="email" placeholder="شماره تلفن" name="email">
+                                    <input type="text" class="form-control  @error('phoneC') is-invalid @enderror " id="email" placeholder="شماره تلفن *" name="phoneC">
+                                    @error('phoneC')
+                                    <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-md-12 col-sm-12">
-                                    <textarea class="form-control" name="zamine" rows="3" id="textareaDefault" placeholder="توضیحات *"></textarea>
+                                    <textarea class="form-control @error('description') is-invalid @enderror  " name="description" rows="3" id="textareaDefault" placeholder="توضیحات *"></textarea>
+                                    @error('description')
+                                    <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -458,6 +528,8 @@
 <script type="text/javascript" src="/app/js/jarallax.min.js"></script>
 <script type="text/javascript" src="/app/js/jarallax-video.min.js"></script>
 <script type="text/javascript" src="/app/js/jarallax-element.min.js"></script>
+<script src="/assets/plugins/global/sweetalert/sweetalert.min.js" type="text/javascript"></script>
+@include('sweet::alert')
 
 <!-- Theme Initialization Files -->
 <script src="/app/js/theme.init.js"></script>
@@ -465,6 +537,88 @@
 <!---start GOFTINO code--->
 <script type="text/javascript">
     !function(){var a=window,d=document;function g(){var g=d.createElement("script"),s="https://www.goftino.com/widget/Hqa6DI",l=localStorage.getItem("goftino");g.type="text/javascript",g.async=!0,g.referrerPolicy="no-referrer-when-downgrade",g.src=l?s+"?o="+l:s;d.getElementsByTagName("head")[0].appendChild(g);}"complete"===d.readyState?g():a.attachEvent?a.attachEvent("onload",g):a.addEventListener("load",g,!1);}();
+
+    $(document).ready(function () {
+
+    @error('fNameRegister')
+        $('#registerModal').modal('toggle');
+    @enderror
+
+    @error('lNameRegister')
+        $('#registerModal').modal('toggle');
+    @enderror
+
+    @error('nationalCodeRegister')
+        $('#registerModal').modal('toggle');
+    @enderror
+
+    @error('companyNameRegister')
+        $('#registerModal').modal('toggle');
+    @enderror
+
+    @error('mobileRegister')
+        $('#registerModal').modal('toggle');
+    @enderror
+
+    @error('sectorRegister')
+        $('#registerModal').modal('toggle');
+    @enderror
+
+    @error('emailRegister')
+        $('#registerModal').modal('toggle');
+    @enderror
+
+    @error('passwordRegister')
+        $('#registerModal').modal('toggle');
+    @enderror
+
+
+
+    @error('email')
+        $('#loginModal').modal('toggle');
+    @enderror
+
+
+    @error('password')
+        $('#loginModal').modal('toggle');
+    @enderror
+
+
+
+
+
+    @error('service')
+        $('#mosharekatModal').modal('toggle');
+    @enderror
+    @error('fNameM')
+        $('#mosharekatModal').modal('toggle');
+    @enderror
+    @error('lNameM')
+        $('#mosharekatModal').modal('toggle');
+    @enderror
+    @error('companyM')
+        $('#mosharekatModal').modal('toggle');
+    @enderror
+    @error('phoneM')
+        $('#mosharekatModal').modal('toggle');
+    @enderror
+
+
+
+    @error('phoneC')
+        $('#contactModal').modal('toggle');
+    @enderror
+    @error('description')
+        $('#contactModal').modal('toggle');
+    @enderror
+
+
+
+
+    });
+
+
+
 </script>
 <!---end GOFTINO code--->
 

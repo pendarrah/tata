@@ -194,5 +194,27 @@ return array(
         'sector' => 'زمینه فعالیت',
         'nationalCode' => 'کد ملی',
         'mobile' => 'شماره موبایل',
+
+        'fNameRegister' => 'نام',
+        'lNameRegister' => 'نام خانوادگی',
+        'nationalCodeRegister' => 'کد ملی',
+        'companyNameRegister' => 'نام شرکت',
+        'mobileRegister' => 'شماره موبایل',
+        'sectorRegister' => 'حوزه فعالیت',
+        'emailRegister' => 'آدرس ایمیل',
+        'passwordRegister' => 'رمز عبور',
+
+        'fNameM' => 'نام',
+        'service' => 'خدمت',
+        'lNameM' => 'نام خانوادگی',
+        'companyM' => 'نام شرکت',
+        'phoneM' => 'شماره تماس',
+
+
+        'phoneC' => 'شماره تماس',
+        'description' => 'توضیحات',
+
+
+
     ),
 );
