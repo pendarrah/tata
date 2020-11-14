@@ -197,6 +197,13 @@
                                             <i class="kt-menu__ver-arrow la la-angle-right"></i></a>
                                     </li>
 
+                                    <li class="kt-menu__item {{ request()->is('*packmenu*') ? 'kt-menu__item--open kt-menu__item--here kt-menu__item--submenu kt-menu__item--rel kt-menu__item--open kt-menu__item--here' : '' }} "
+                                        data-ktmenu-submenu-toggle="click" aria-haspopup="true">
+                                        <a href="{{ route('dashboard.packmenu') }}" class="kt-menu__link">
+                                            <span class="kt-menu__link-text"> پکیج کاربران</span>
+                                            <i class="kt-menu__ver-arrow la la-angle-right"></i></a>
+                                    </li>
+
 
 
 

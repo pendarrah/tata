@@ -40,6 +40,13 @@ Route::namespace('Dashboard')->prefix('dashboard')->middleware('auth')->group(fu
     Route::get('/participate', 'ParticipatesController@index')->name('dashboard.participate');
     Route::get('/calls', 'CallsController@index')->name('dashboard.calls');
 
+
+
+    Route::get('/packmenu', 'PackmenuController@index')->name('dashboard.packmenu');
+    Route::resource('insurpack', 'InsurpackController');
+    Route::resource('moein', 'MoeinController');
+    Route::resource('moeindetail', 'MoeindetailController');
+
 });
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
