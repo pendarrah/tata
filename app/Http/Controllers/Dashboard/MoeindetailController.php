@@ -15,7 +15,8 @@ class MoeindetailController extends Controller
      */
     public function index()
     {
-        return view('dashboard.moeindetail.index');
+        $moeindetail = Moeindetail::all();
+        return view('dashboard.moeindetail.index',compact('moeindetail'));
     }
 
     /**
@@ -36,7 +37,22 @@ class MoeindetailController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request-> validate([
+            'tip' => 'required',
+            'examples' => 'required',
+            'answers' => 'required',
+            'moeinId' => 'required',
+        ]);
+
+        $moein = Moeindetail::create([
+            'tip' => $request->tip,
+            'examples' => $request->examples,
+            'answers' => $request->answers,
+            'moeinId' => $request->moeinId,
+        ]);
+
+        alert('انجام شد',' معین با موفقیت ثب گردید ');
+        return redirect()->back();
     }
 
     /**
@@ -58,7 +74,7 @@ class MoeindetailController extends Controller
      */
     public function edit(Moeindetail $moeindetail)
     {
-        //
+        return view('dashboard.moeindetail.edit', compact('moeindetail'));
     }
 
     /**
@@ -70,7 +86,20 @@ class MoeindetailController extends Controller
      */
     public function update(Request $request, Moeindetail $moeindetail)
     {
-        //
+        $request-> validate([
+            'tip' => 'required',
+            'examples' => 'required',
+            'answers' => 'required',
+        ]);
+
+        $moeindetail->update([
+            'tip' => $request->tip,
+            'examples' => $request->examples,
+            'answers' => $request->answers,
+        ]);
+
+        alert('انجام شد','اطلاعات تکمیلی معین شما با موفقیت ویرایش شد. ');
+        return redirect()->back();
     }
 
     /**

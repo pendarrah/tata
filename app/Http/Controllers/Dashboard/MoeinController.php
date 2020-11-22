@@ -15,7 +15,8 @@ class MoeinController extends Controller
      */
     public function index()
     {
-        return view('dashboard.moein.index');
+        $moein = Moein::all();
+        return view('dashboard.moein.index',compact('moein'));
     }
 
     /**
@@ -36,7 +37,22 @@ class MoeinController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request-> validate([
+            'codeNum' => 'required',
+            'title' => 'required',
+            'insurpackCode' => 'required',
+        ]);
+
+        $moein = Moein::create([
+            'codeNum' => $request->codeNum,
+            'title' => $request->title,
+            'moeinCode' => $request->moeinCode,
+            'moeinName' => $request->moeinName,
+            'insurpackCode' => $request->insurpackCode,
+        ]);
+
+        alert('انجام شد',' معین با موفقیت ثب گردید ');
+        return redirect()->back();
     }
 
     /**
@@ -58,7 +74,7 @@ class MoeinController extends Controller
      */
     public function edit(Moein $moein)
     {
-        //
+        return view('dashboard.moein.edit', compact('moein'));
     }
 
     /**
@@ -70,7 +86,22 @@ class MoeinController extends Controller
      */
     public function update(Request $request, Moein $moein)
     {
-        //
+        $request-> validate([
+            'codeNum' => 'required',
+            'title' => 'required',
+            'insurpackCode' => 'required',
+        ]);
+
+        $moein->update([
+            'codeNum' => $request->codeNum,
+            'title' => $request->title,
+            'moeinCode' => $request->moeinCode,
+            'moeinName' => $request->moeinName,
+            'insurpackCode' => $request->insurpackCode,
+        ]);
+
+        alert('انجام شد','معین با موفقیت ویرایش شد. ');
+        return redirect()->back();
     }
 
     /**

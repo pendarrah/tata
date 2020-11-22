@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
-use App\insurpack;
+use App\Insurpack;
 use Illuminate\Http\Request;
 
 class InsurpackController extends Controller
@@ -15,7 +15,8 @@ class InsurpackController extends Controller
      */
     public function index()
     {
-        return view('dashboard.insurpack.index');
+        $insurpack = Insurpack::all();
+        return view('dashboard.insurpack.index',compact('insurpack'));
     }
 
     /**
@@ -25,7 +26,7 @@ class InsurpackController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -36,7 +37,20 @@ class InsurpackController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'required',
+            'codeNum' => 'required',
+            'users' => 'required',
+        ]);
+
+        $insurpack = Insurpack::create([
+            'title' => $request->title,
+            'codeNum' => $request->codeNum,
+            'users' => $request->users,
+        ]);
+
+        alert('پکیج با موفقیت شد','انجام شد');
+        return redirect()->back();
     }
 
     /**
@@ -58,7 +72,7 @@ class InsurpackController extends Controller
      */
     public function edit(insurpack $insurpack)
     {
-        //
+        return view('dashboard.insurpack.edit', compact('insurpack'));
     }
 
     /**
@@ -70,7 +84,20 @@ class InsurpackController extends Controller
      */
     public function update(Request $request, insurpack $insurpack)
     {
-        //
+        $request->validate([
+            'title' => 'required',
+            'codeNum' => 'required',
+            'users' => 'required',
+        ]);
+
+        $insurpack->update([
+            'title' => $request->title,
+            'codeNum' => $request->codeNum,
+            'users' => $request->users,
+        ]);
+
+        alert('پکیج بیمه با موفقیت ویرایش شد','انجام شد');
+        return redirect()->back();
     }
 
     /**

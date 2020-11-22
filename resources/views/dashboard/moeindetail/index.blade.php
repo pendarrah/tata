@@ -43,14 +43,14 @@
                     </button>
                 </div>
                 <div class="modal-body modal-scroll" style="background-color:#fbfcfd">
-                    <form action="{{ route('package.store') }}" method="post" class="form-horizontal" enctype="multipart/form-data">
+                    <form action="{{ route('moeindetail.store') }}" method="post" class="form-horizontal" enctype="multipart/form-data">
                         @csrf
 
                         <div class="form-group mb-0">
 
                             <div class="input-group mt-3">
                                 <div class="input-group-prepend min-width-180"><span class="input-group-text bg-light min-width-140" id="basic-addon7"> <i class="fas fa-star required-star mr-1"></i> نکته اول : </span></div>
-                                <input type="text" class="form-control inputfield" value="{{ old('title') }}" name="codeNum" >
+                                <input type="text" class="form-control inputfield" value="{{ old('title') }}" name="tip" >
                             </div>
 
                             <div class="input-group mt-3">
@@ -67,8 +67,9 @@
                                 <div class="input-group-prepend min-width-180"><span class="input-group-text bg-light min-width-140" id="basic-addon7"> <i class="fas fa-star required-star mr-1"></i> کد معین : </span></div>
                                 <select class="form-controller" name="moeinId">
                                     <option> کاربر مورد نظر انتخاب فرمایید </option>
-                                    <option value=""> 44444 </option>
-                                    <option value=""> 5555 </option>
+                                    @foreach (\App\Moein::all() as $moein)
+                                        <option value="{{ $moein->id }}"> {{ $moein->codeNum }} </option>
+                                    @endforeach
                                 </select>
                             </div>
 
@@ -207,9 +208,22 @@
                             </tr>
                             </thead>
                             <tbody>
-
-                            
-
+                            @foreach($moeindetail as $moeindetails)
+                                <tr>
+                                    <td> {{ $moeindetails->id }} </td>
+                                    <td> {{ $moeindetails->tip }} </td>
+                                    <td> 
+                                        @foreach (\App\Moein::where('id',$moeindetails->moeinId)->get() as $insurpackCode)
+                                            {{ $insurpackCode->codeNum }}
+                                        @endforeach
+                                    </td>
+                                    <td>
+                                        <a href="{{ route('moeindetail.edit', $moeindetails->id) }}" ><i class="far fa-edit text-info mr-1 button font-15"></i></a>
+                                        <a href="" id="removePackage" title="حذف" data-name="{{ $moeindetails->title }}" data-id="{{ $moeindetails->id }}"><i class="far fa-trash-alt text-danger font-15"></i></a>
+                                    
+                                    </td>
+                                </tr>
+                            @endforeach 
                             </tbody>
 
                         </table>

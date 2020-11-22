@@ -43,14 +43,14 @@
                     </button>
                 </div>
                 <div class="modal-body modal-scroll" style="background-color:#fbfcfd">
-                    <form action="{{ route('package.store') }}" method="post" class="form-horizontal" enctype="multipart/form-data">
+                    <form action="{{ route('moein.store') }}" method="post" class="form-horizontal" enctype="multipart/form-data">
                         @csrf
 
                         <div class="form-group mb-0">
 
                             <div class="input-group mt-3">
                                 <div class="input-group-prepend min-width-180"><span class="input-group-text bg-light min-width-140" id="basic-addon7"> <i class="fas fa-star required-star mr-1"></i> شماره کد : </span></div>
-                                <input type="text" class="form-control inputfield" value="{{ old('title') }}" name="codeNum" >
+                                <input type="text" class="form-control inputfield" value="{{ old('codeNum') }}" name="codeNum" >
                             </div>
 
                             <div class="input-group mt-3">
@@ -60,20 +60,21 @@
 
                             <div class="input-group mt-3">
                                 <div class="input-group-prepend min-width-180"><span class="input-group-text bg-light min-width-140" id="basic-addon7"> <i class="fas fa-star required-star mr-1"></i> کد معین : </span></div>
-                                <input type="text" class="form-control inputfield" value="{{ old('title') }}" name="title" >
+                                <input type="text" class="form-control inputfield" value="{{ old('moeinCode') }}" name="moeinCode" >
                             </div>
 
                             <div class="input-group mt-3">
                                 <div class="input-group-prepend min-width-180"><span class="input-group-text bg-light min-width-140" id="basic-addon7"> <i class="fas fa-star required-star mr-1"></i> نام معین : </span></div>
-                                <input type="text" class="form-control inputfield" value="{{ old('title') }}" name="title" >
+                                <input type="text" class="form-control inputfield" value="{{ old('moeinName') }}" name="moeinName" >
                             </div>
 
                             <div class="input-group mt-3">
                                 <div class="input-group-prepend min-width-180"><span class="input-group-text bg-light min-width-140" id="basic-addon7"> <i class="fas fa-star required-star mr-1"></i> شماره کد پکیج : </span></div>
-                                <select class="form-controller" name="customerId">
+                                <select class="form-controller" name="insurpackCode">
                                     <option> شماره کد تعریف شده را وارد کنید </option>
-                                    <option value=""> 44123 </option>
-                                    <option value=""> 12298 </option>
+                                    @foreach(\App\Insurpack::all() as $insurpackCode)
+                                    <option value="{{ $insurpackCode->id }}"> {{ $insurpackCode->title }} </option>
+                                    @endforeach
                                 </select>
                             </div>
 
@@ -207,14 +208,27 @@
                             <tr>
                                 <th title="Field #1" data-field="1">شناسه</th>
                                 <th title="Field #2" data-field="2">عنوان</th>
-                                <th title="Field #2" data-field="2">کاربر</th>
+                                <th title="Field #2" data-field="2">شماره پکیج</th>
                                 <th title="Field #5" data-field="5">تغییرات</th>
                             </tr>
                             </thead>
                             <tbody>
-
-                            
-
+                            @foreach($moein as $moeins)
+                                <tr>
+                                    <td> {{ $moeins->id }} </td>
+                                    <td>{{ $moeins->title }}</td>
+                                    <td> 
+                                        @foreach (\App\Insurpack::where('id',$moeins->insurpackCode)->get() as $insurpackCode)
+                                            {{ $insurpackCode->codeNum }}
+                                        @endforeach
+                                    </td>
+                                    <td>
+                                        <a href="{{ route('moein.edit', $moeins->id) }}" ><i class="far fa-edit text-info mr-1 button font-15"></i></a>
+                                        <a href="" id="removePackage" title="حذف" data-name="{{ $moeins->title }}" data-id="{{ $moeins->id }}"><i class="far fa-trash-alt text-danger font-15"></i></a>
+                                    
+                                    </td>
+                                </tr>
+                            @endforeach 
                             </tbody>
 
                         </table>

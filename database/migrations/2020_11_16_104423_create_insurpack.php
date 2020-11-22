@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateParticipatesTable extends Migration
+class CreateInsurpack extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,12 @@ class CreateParticipatesTable extends Migration
      */
     public function up()
     {
-        Schema::create('participates', function (Blueprint $table) {
+        Schema::create('insurpacks', function (Blueprint $table) {
             $table->id();
-            $table->string('fNameM');
-            $table->string('service');
-            $table->string('lNameM');
-            $table->string('companyM');
-            $table->string('phoneM');
+            $table->string('codeNum');
+            $table->string('title');
+            $table->string('users');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
@@ -31,6 +30,6 @@ class CreateParticipatesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('participates');
+        Schema::dropIfExists('insurpacks');
     }
 }

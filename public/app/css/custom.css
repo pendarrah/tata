@@ -121,6 +121,7 @@ svg.bg-success [stroke]:not([stroke="none"]) {
 }
 .list-unstyled h6{
 	font-weight: bolder;
+	text-align: right;
 }
 .bg-danger-alt {
 	background-color: rgba(220,53,69,.1);

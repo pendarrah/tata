@@ -43,7 +43,7 @@
                     </button>
                 </div>
                 <div class="modal-body modal-scroll" style="background-color:#fbfcfd">
-                    <form action="{{ route('package.store') }}" method="post" class="form-horizontal" enctype="multipart/form-data">
+                    <form action="{{ route('insurpack.store') }}" method="post" class="form-horizontal" enctype="multipart/form-data">
                         @csrf
 
                         <div class="form-group mb-0">
@@ -60,10 +60,12 @@
 
                             <div class="input-group mt-3">
                                 <div class="input-group-prepend min-width-180"><span class="input-group-text bg-light min-width-140" id="basic-addon7"> <i class="fas fa-star required-star mr-1"></i> کاربر : </span></div>
-                                <select class="form-controller" name="customerId">
+                                <select class="form-controller" name="users">
                                     <option> کاربر مورد نظر انتخاب فرمایید </option>
-                                    <option value=""> کاربر شماره 1 </option>
-                                    <option value=""> کاربر شماره 2 </option>
+
+                                    @foreach(\App\User::all() as $user)
+                                        <option value="{{ $user->id }}"> {{ $user->email }} </option>
+                                    @endforeach
                                 </select>
                             </div>
 
@@ -202,8 +204,22 @@
                             </tr>
                             </thead>
                             <tbody>
-
-                            
+                            @foreach($insurpack as $insurpacks)
+                                <tr>
+                                    <td> {{ $insurpacks->id }} </td>
+                                    <td>{{ $insurpacks->title }}</td>
+                                    <td> 
+                                        @foreach (\App\User::where('id',$insurpacks->users)->get() as $users)
+                                            {{ $users->email }}
+                                        @endforeach
+                                    </td>
+                                    <td>
+                                        <a href="{{ route('insurpack.edit', $insurpacks->id) }}" ><i class="far fa-edit text-info mr-1 button font-15"></i></a>
+                                        <a href="" id="removePackage" title="حذف" data-name="{{ $insurpacks->title }}" data-id="{{ $insurpacks->id }}"><i class="far fa-trash-alt text-danger font-15"></i></a>
+                                    
+                                    </td>
+                                </tr>
+                            @endforeach 
 
                             </tbody>
 
