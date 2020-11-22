@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'AppController@index')->name('app.index');
+Route::get('/services', 'servicesController@index')->name('app.services');
+Route::get('/contact', 'contactController@index')->name('app.contact');
+Route::get('/about', 'aboutController@index')->name('app.about');
 Route::post('/participate', 'AppController@participate')->name('app.participate');
 Route::post('/call', 'AppController@call')->name('app.call');
 

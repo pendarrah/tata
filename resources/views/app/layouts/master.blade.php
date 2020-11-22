@@ -119,7 +119,7 @@
                                             <li class="dropdown"><a class="dropdown-item" href="#packages">پکیج ها</a></li>
                                             <li class="dropdown"><a class="dropdown-item " href="#">اخبار</a></li>
                                             <li class="dropdown"><a class="dropdown-item" href="#">وبلاگ</a></li>
-                                            <li class="dropdown"><a class="dropdown-item" href="{{ route('app.blog', 1) }}">درباره ما</a></li>
+                                            <li class="dropdown"><a class="dropdown-item" href="{{ route('app.about') }}">درباره ما</a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -487,8 +487,8 @@
                     <div class="col-lg-4">
                         <nav id="sub-menu">
                             <ul>
-                                <li><a href="#">تماس با ما</a></li>
-                                <li><a href="{{ route('app.blog', 1) }}">درباره ما</a></li>
+                                <li><a href="{{ route('app.contact') }}">تماس با ما</a></li>
+                                <li><a href="{{ route('app.about') }}">درباره ما</a></li>
                             </ul>
                         </nav>
                     </div>
